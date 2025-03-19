@@ -1,0 +1,21 @@
+.flex {
+  border: solid 1px rgb(0, 123, 255);
+  background-color: rgba(42, 116, 165, 0.317);
+  padding: 16px 8px;
+  border-radius: 16px;
+
+  margin-top: 180px;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.content {
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  min-height: 10%;
+  align-items: center;
+  gap: 1rem;
+}

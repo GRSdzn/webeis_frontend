@@ -1,0 +1,39 @@
+{
+	"data": {
+		"object_type": 4,
+		"object_info": {
+			"browsername": null,
+			"browsercaption": null,
+			"browserheight": null,
+			"browserwidth": null,
+			"idbrowserheader": null,
+			"idmenu": null,
+			"menuwidth": null,
+			"modifydate": null,
+			"idis": null,
+			"viewerlayout": null,
+			"toolbarvisible": null,
+			"data": null,
+			"standartitemstoolbargroupingmode": null,
+			"finder_name": "Поиск Комплексный объект ТОиР",
+			"idbrowser": "9414a5a6-80d0-4e26-99b7-7fe6ccc874cc",
+			"finder_param": [
+				{
+					"idfinder": "d6544799-27c7-4dd0-85c0-d73b7535a298",
+					"finderparameterorder": 70,
+					"finderparametername": "object_address",
+					"finderparametercaption": "Местонахождение объекта",
+					"finderparametertype": "string",
+					"required": false
+				},
+			]
+		},
+		"object_data": null,
+		"extra_field_first": null,
+		"extra_field_second": null
+	},
+	"user": {
+		"uuid": "b1e5af37-595a-4045-8a40-de853d8254e1",
+		"username": "COSMOS2\\Oleg.Panyushkin"
+	}
+}
