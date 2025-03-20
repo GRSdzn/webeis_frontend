@@ -223,7 +223,7 @@ const BrowserSimpleTable: React.FC<BrowserSimpleTableProps> = ({
 
           <Center>
             <Pagination
-              total={Math.ceil((pagination.object_data_total || data.length || 1) / pageSize)}
+              total={Math.ceil((pagination.object_data_total || 1) / pageSize)}
               value={page}
               onChange={handlePageChange}
               mt="md"

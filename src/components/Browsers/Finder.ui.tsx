@@ -45,6 +45,10 @@ const Finder: React.FC<FinderFormProps> = ({ info }) => {
       frametype: 0,
       idbrowser: info.idbrowser,
       browserParam: p_param,
+      pagination: {
+        page: 1,
+        limit: 10,
+      },
     };
 
     const encoded = encodeMenuItem(mergedMenuItem, p_param);
