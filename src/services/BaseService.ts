@@ -7,10 +7,12 @@ import store, { signOutSuccess } from '../store';
 
 const unauthorizedCode = [401];
 
+const api = import.meta.env.VITE_BACKEND_URL;
+
 //TODO: FIX HARDCODE
 const BaseService = axios.create({
   timeout: 20000,
-  baseURL: `http://10.0.0.87:8000/${appConfig.apiPrefix}`,
+  baseURL: `${api}/${appConfig.apiPrefix}`,
 });
 
 BaseService.interceptors.request.use(
