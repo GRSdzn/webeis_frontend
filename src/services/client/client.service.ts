@@ -50,4 +50,28 @@ export const ClientService = {
     });
     return res.data;
   },
+
+  async objectViewer(
+    p_id_object: string | null,
+    p_frametype: number | '0',
+    p_param?: any,
+    pagination?: TPaginationSort,
+    uuid?: string
+  ): Promise<ObjectOpenResponse> {
+    const res = await ApiService.fetchData<
+      {
+        p_id_object: string | null;
+        p_frametype: number | '0';
+        p_param?: any;
+        pagination?: TPaginationSort;
+        uuid?: string;
+      },
+      ObjectOpenResponse
+    >({
+      url: '/objects/viewer',
+      method: 'POST',
+      data: { p_id_object, p_frametype, p_param, pagination, uuid },
+    });
+    return res.data;
+  },
 };

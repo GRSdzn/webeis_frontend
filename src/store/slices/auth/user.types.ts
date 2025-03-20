@@ -31,6 +31,7 @@ export interface MenuItemData {
   idmenuitemparent?: string;
   pagination: TPaginationSort | undefined;
   browserParam: BrowserDataContent | undefined;
+  isViewer?: boolean;
 }
 
 export type UMenuItemData<T = {}> = MenuItemData &

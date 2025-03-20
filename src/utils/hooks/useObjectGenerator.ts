@@ -15,19 +15,18 @@ export function useObjectGenerator() {
   const currentFrametype = allParams?.frametype || 0;
   const currentBrowserParam = allParams?.browserParam;
   const currentPagination = allParams?.pagination;
+  const isViewer = allParams?.isViewer;
   const order = allParams?.order;
   const sort_by = allParams?.sort_by;
-  console.log('currentPagination', currentPagination); // здесь pagination верный
+  console.log('allParams', allParams); // здесь pagination верный
   const { open } = useOpenObject(
     currentObjectID,
     currentFrametype,
     currentBrowserParam,
-    currentPagination
+    currentPagination,
+    isViewer
   );
 
-  // console.log('allParams', allParams);
-  // console.log('params', params);
-  // console.log('paramsCustom', paramsCustom);
   const queryKey = [
     'objectGenerator',
     currentObjectID,

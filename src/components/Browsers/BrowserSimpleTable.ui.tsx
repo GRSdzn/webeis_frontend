@@ -160,6 +160,7 @@ const BrowserSimpleTable: React.FC<BrowserSimpleTableProps> = ({
     };
     const decompData = {
       frametype: 0,
+      isViewer: record.isviewer,
     };
     const encodedItem = encodeMenuItem(
       decompData,

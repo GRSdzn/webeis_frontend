@@ -6,12 +6,15 @@ export function useOpenObject(
   idObject: string | null,
   frametype: number | '0',
   p_param?: any,
-  pagination?: TPaginationSort
+  pagination?: TPaginationSort,
+  isViewer?: boolean
 ) {
   const open = async (): Promise<ResponseData[]> => {
     let resp: ObjectOpenResponse;
     if (frametype === 13) {
       resp = await ClientService.objectFinder(idObject, frametype, p_param, pagination);
+    } else if (isViewer) {
+      resp = await ClientService.objectViewer(idObject, frametype, p_param, pagination);
     } else {
       resp = await ClientService.objectOpen(idObject, frametype, p_param, pagination);
     }
@@ -19,7 +22,7 @@ export function useOpenObject(
     const server = resp;
 
     const result: ResponseData[] = [];
-
+    console.log('result', result);
     if (server.finder) {
       result.push({
         type: server.finder.object_type,
@@ -30,6 +33,7 @@ export function useOpenObject(
         extra_field_second: server.finder.extra_field_second,
       });
     }
+    console.log('server', server);
 
     if (server.data) {
       result.push({
